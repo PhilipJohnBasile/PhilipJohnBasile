@@ -1,6 +1,6 @@
 # Philip John Basile
 
-I'm a principal AI systems engineer at **Basilcom Inc.**, with **27+ years of building and shipping software**. My work has taken me through healthcare, enterprise systems, cybersecurity, and defense. Today I build AI platforms for businesses and work on the runtimes that let large models run locally on Apple Silicon.
+I'm a principal AI systems engineer at **Basilcom Inc.**, with **27+ years of building and shipping software**. My work has taken me through healthcare, enterprise systems, cybersecurity, and defense. Today I build AI platforms for businesses, train my own models, and work on the runtimes that let large models run locally on Apple Silicon.
 
 I work across architecture, implementation, performance, and team development. The [case studies](https://github.com/PhilipJohnBasile/engineering-case-studies) show how I approach that work.
 
@@ -25,11 +25,12 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 
 ## Hugging Face contributions
 
-I publish model conversions, experimental derivatives, and training data on [**Hugging Face**](https://huggingface.co/philipjohnbasile). My part of the work is making existing models usable in new runtimes, checking what survives conversion, and sharing the results.
+I built and trained **Wisp Coder 110M** from scratch. Alongside that original model work, I publish conversions, experimental derivatives, and training data on [**Hugging Face**](https://huggingface.co/philipjohnbasile). I work on both the models themselves and the engineering needed to run them locally.
 
 **19 public model repositories · 1 public dataset · 11,272 model downloads in the preceding month**  
 *Hugging Face Hub snapshot, September 10, 2026; downloads summed across my public model repositories.*
 
+- **[Wisp Coder 110M](https://huggingface.co/philipjohnbasile/wisp-coder-110m)** — My own code model, built and trained from scratch. The model repository is currently private.
 - **[Qwen Fable-Fusion for MLX and MTPLX](https://huggingface.co/philipjohnbasile/Qwen3.6-27B-Fable-Fusion-711-MTPLX-8bit)** — Reconstructed DavidAU's GGUF release for MLX, published 4-, 6-, and 8-bit builds, and preserved the vision tower and multi-token prediction head. The cards include conversion details and measured decoding results.
 - **[Ornith 1.5 for MTPLX](https://huggingface.co/philipjohnbasile/ornith-ai-Ornith-1.5-35B-A3B-V2-MTPLX)** — Published an Apple Silicon conversion with mixed-precision weights, a BF16 MTP head, and documented source provenance and runtime requirements.
 - **[DeepSeek V4 Flash for MLX](https://huggingface.co/philipjohnbasile/DeepSeek-V4-Flash-0731-MLX-M5Max-TargetOnly)** — Built an experimental conversion and published comparisons against the original model, including a full 198-question GPQA Diamond run. Retained as a reference, with the quality regressions and faster alternative documented.
