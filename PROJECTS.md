@@ -27,6 +27,12 @@ I want a coding agent to find the right file and run the tests before it tells m
 
 [**Wisp Coder 110M**](https://huggingface.co/philipjohnbasile/wisp-coder-110m) is my own code-completion model, trained from scratch on 5 billion tokens with native fill-in-the-middle and multi-token prediction. The weights and model card are available on Hugging Face. The [engineering case study](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) follows the work through tokenizer training, export verification, and controlled evaluation.
 
+You can [**try Wisp in your browser**](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo): choose an example, edit the code before and after the cursor, and generate a suggestion. The free CPU demo uses the 100.7M-parameter standard decoder, without the research model's separate MTP module. It displays the generated code without executing it.
+
+My conversion work includes [**Fable-Fusion**](https://huggingface.co/philipjohnbasile/Qwen3.6-27B-Fable-Fusion-711-MTPLX-6bit), [**Ornith 1.5**](https://huggingface.co/philipjohnbasile/ornith-ai-Ornith-1.5-35B-A3B-V2-MTPLX), and [**Akka**](https://huggingface.co/philipjohnbasile/Qwen3.6-27B-Akka-6bit-MLX). DavidAU, Ornith AI, and nightmedia created those upstream models. My work covers MLX packaging, quantization, and the checks needed to understand how each artifact behaves in its intended runtime. For Fable-Fusion, that included reconstructing Q8_0 weights and calibrating an MTP sidecar; for Akka, a failed calibration led me to ship an ordinary autoregressive build without the draft head.
+
+The [**Selected Work**](https://huggingface.co/collections/philipjohnbasile/start-here-selected-work-6aa309b179b2a196db52a12b) collection brings the demo and featured models together. [**Apple Silicon — Experimental Models**](https://huggingface.co/collections/philipjohnbasile/apple-silicon-experimental-models) covers research releases with narrower uses and documented limits.
+
 My [**Hy3-Demolition-MLX**](https://github.com/PhilipJohnBasile/hy3-demolition-mlx) and [**GLM-5.2 Demolition**](https://github.com/PhilipJohnBasile/glm52-demolition) projects explore pruning, quantization, and LoRA training to make large models more practical on local hardware.
 
 I keep the results and the dead ends. [**scrutineer**](https://github.com/PhilipJohnBasile/scrutineer) is a small tool for recording a claim, the test used to check it, and the evidence behind the result.
