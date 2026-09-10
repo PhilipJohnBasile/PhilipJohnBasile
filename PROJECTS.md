@@ -25,6 +25,8 @@ I want a coding agent to find the right file and run the tests before it tells m
 
 ### Models and experiments
 
+[**Data and model catalog**](DATA-AND-MODELS.md) covers the training corpus, the data pipelines, and all 20 public model repositories, with original training distinguished from fine-tuning, pruning, and conversion.
+
 The [**Local AI Guide**](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide) is a searchable catalog of my 20 public model repositories. It brings model cards, inspected revisions, runtime requirements, and available evaluation records together. You can filter by project family, intended use, artifact type, and tensor download size. Download size and measured runtime memory are kept separate.
 
 [**Wisp Coder 110M**](https://huggingface.co/philipjohnbasile/wisp-coder-110m) is my own code-completion model, trained from scratch on 5 billion tokens with native fill-in-the-middle and multi-token prediction. The weights and model card are available on Hugging Face. The [engineering case study](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) follows the work through tokenizer training, export verification, and controlled evaluation.
