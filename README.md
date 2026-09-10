@@ -25,13 +25,20 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 
 ## Hugging Face contributions
 
-I built and trained **Wisp Coder 110M** from scratch. Alongside that original model work, I publish conversions, experimental derivatives, and training data on [**Hugging Face**](https://huggingface.co/philipjohnbasile). I work on both the models themselves and the engineering needed to run them locally.
+My [**Hugging Face**](https://huggingface.co/philipjohnbasile) work covers original models, conversions, experimental derivatives, and training data. I work on both the models themselves and the engineering needed to run them locally.
 
 **20 public model repositories · 1 public dataset · 11,388 model downloads in the preceding month**
 
 *Hugging Face Hub snapshot, September 10, 2026; downloads summed across my public model repositories.*
 
-- **[Wisp Coder 110M](https://huggingface.co/philipjohnbasile/wisp-coder-110m)** — My own code-completion model, trained from scratch on 5 billion tokens with native fill-in-the-middle and multi-token prediction.
+### Wisp Coder: a model I built from scratch
+
+With [**Wisp Coder 110M**](https://huggingface.co/philipjohnbasile/wisp-coder-110m), I took the work from tokenizer training to released weights. I trained a 32K-token tokenizer on 400,000 documents and a 108.2M-parameter code model on 5 billion tokens using MLX on Apple Silicon. Fill-in-the-middle and multi-token prediction were part of training from the start.
+
+I checked the export against Transformers, published decoding correctness checks, and evaluated five models across 1,372 code-completion tasks. I published the comparisons even when they didn't favor Wisp. The [Wisp case study](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) covers the design decisions, evidence, and limitations.
+
+### Model conversions and training data
+
 - **[Qwen Fable-Fusion for MLX and MTPLX](https://huggingface.co/philipjohnbasile/Qwen3.6-27B-Fable-Fusion-711-MTPLX-8bit)** — Reconstructed DavidAU's GGUF release for MLX, published 4-, 6-, and 8-bit builds, and preserved the vision tower and multi-token prediction head. The cards include conversion details and measured decoding results.
 - **[Ornith 1.5 for MTPLX](https://huggingface.co/philipjohnbasile/ornith-ai-Ornith-1.5-35B-A3B-V2-MTPLX)** — Published an Apple Silicon conversion with mixed-precision weights, a BF16 MTP head, and documented source provenance and runtime requirements.
 - **[DeepSeek V4 Flash for MLX](https://huggingface.co/philipjohnbasile/DeepSeek-V4-Flash-0731-MLX-M5Max-TargetOnly)** — Built an experimental conversion and published comparisons against the original model, including a full 198-question GPQA Diamond run. Retained as a reference, with the quality regressions and faster alternative documented.
@@ -55,9 +62,10 @@ A few examples from my recent work:
 
 ## Engineering case studies
 
-Three examples of the work behind the project list:
+Four examples of the work behind the project list:
 
 - [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
+- [**Training and releasing Wisp Coder**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md): tokenizer training, model pretraining, runtime compatibility, and controlled experiments.
 - [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
 - [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
 
