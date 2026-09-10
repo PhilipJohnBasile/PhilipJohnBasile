@@ -2,7 +2,7 @@
 
 I'm a principal AI systems engineer at **Basilcom Inc.**, with **27+ years of building and shipping software**. My work has taken me through healthcare, enterprise systems, cybersecurity, and defense. Today I build AI platforms for businesses and work on the runtimes that let large models run locally on Apple Silicon.
 
-I work across the whole system: architecture, implementation, performance, and the people who have to use and maintain it. I'm just as comfortable tracking down a quantization bug as helping a team decide what to build.
+I work across architecture, implementation, performance, and team development. The [case studies](https://github.com/PhilipJohnBasile/engineering-case-studies) show how I approach that work.
 
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models_%26_Data-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/philipjohnbasile) [![Writing](https://img.shields.io/badge/Medium-Writing-12100E?style=flat-square&logo=medium&logoColor=white)](https://philipjohnbasile.medium.com/) [![Sponsor](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/PhilipJohnBasile)
 
@@ -51,40 +51,23 @@ A few examples from my recent work:
 
 [Career background and case studies](https://philipjohnbasile.com)
 
-## Things I'm building
+## Engineering case studies
 
-### Local AI on a Mac
+Three examples of the work behind the project list:
 
-Getting large models to run locally has turned into a few related projects:
+- [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
+- [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
+- [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
 
-- [**iliria**](https://github.com/PhilipJohnBasile/iliria) streams parts of large mixture-of-experts models from SSD as they're needed. It's written in C/Metal and builds on [colibri](https://github.com/JustVugg/colibri).
-- [**trailbrake**](https://github.com/PhilipJohnBasile/trailbrake) is a native MLX inference engine for dense Qwen models, with careful control over memory and caching.
-- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol) puts both engines behind one API, routing requests between them and handling fallback when an engine fails.
-- [**iliria-fm**](https://github.com/PhilipJohnBasile/iliria-fm) is an experiment connecting that stack to Apple's Foundation Models framework through Swift.
-- [**ggml-rust**](https://github.com/PhilipJohnBasile/ggml-rust) is the beginning of an independent GGML-compatible runtime in Rust. The first pieces handle GGUF parsing, file mapping, and model inspection.
+## Selected projects
 
-### Tools for coding agents
+- [**iliria**](https://github.com/PhilipJohnBasile/iliria): C/Metal inference that streams large MoE models from SSD, built on colibri.
+- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol): routing and failure recovery across local inference engines, with a runnable HTTP demo.
+- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve): local code retrieval for coding agents, with CLI and MCP interfaces.
+- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore): embedded vector search with metadata filtering and persistence.
+- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs): an experimental TypeScript UI framework with a dependency-free signals demo.
 
-I want a coding agent to find the right file and run the tests before it tells me it's done. These projects tackle different parts of that:
-
-- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve) helps agents find relevant code through a local index, with a CLI, MCP support, and editor integrations.
-- [**merle**](https://github.com/PhilipJohnBasile/merle) uses a local model to generate fixes, runs the requested tests, and shows the resulting diff.
-- [**Graph-Native MLX**](https://github.com/PhilipJohnBasile/graph-native-mlx) gives coding agents a defined workflow, saved progress, separate worktrees, and limits on retries.
-- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore) adds vector search directly to an application, without a separate database server. It has Rust, Python, and browser interfaces.
-
-### Models and experiments
-
-My [**Hy3-Demolition-MLX**](https://github.com/PhilipJohnBasile/hy3-demolition-mlx) and [**GLM-5.2 Demolition**](https://github.com/PhilipJohnBasile/glm52-demolition) projects explore pruning, quantization, and LoRA training to make large models more practical on local hardware.
-
-I keep the results and the dead ends. [**scrutineer**](https://github.com/PhilipJohnBasile/scrutineer) is a small tool for recording a claim, the test used to check it, and the evidence behind the result.
-
-## A few other things
-
-There's a music and creative coding side to my work, too.
-
-- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs) is my JavaScript/TypeScript and Rust UI framework, with work on reactivity, server rendering, and WebAssembly.
-- **Concert Echo** is a Flutter app for live-music fans to keep their show memories, photos, and videos together.
-- [**Generative Rust**](https://github.com/PhilipJohnBasile/generative-rust) contains the companion code for *Generative Rust: Building AI Agents for Art, Audio, and Real-Time Synthesis*. It brings together model inference, procedural visuals, and sound.
+[More projects, model experiments, and creative work](PROJECTS.md)
 
 ## Say hello
 
