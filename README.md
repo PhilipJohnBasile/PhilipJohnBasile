@@ -1,26 +1,19 @@
 <a name="top"></a>
 
-<h1><a href="#the-lab"><picture>
-  <source media="(max-width: 600px)" srcset="assets/studio-hero-mobile.svg" />
-  <img src="assets/studio-hero.svg" width="100%" alt="Philip John Basile — Make something matter. Open the project lab below." />
-</picture></a></h1>
+<div>
+<a href="#the-lab"><picture><source media="(max-width: 600px)" srcset="assets/studio-hero-mobile.svg" /><img src="assets/studio-hero.svg" width="100%" align="top" alt="Philip John Basile — Make something matter. Open the project lab below." /></picture></a><br />
+<a href="#the-patches"><picture><source media="(max-width: 600px)" srcset="assets/studio-index-patches-mobile.svg" /><img src="assets/studio-index-patches.svg" width="25%" align="top" alt="The patches — jump to upstream contributions" /></picture></a><a href="#the-lab"><picture><source media="(max-width: 600px)" srcset="assets/studio-index-lab-mobile.svg" /><img src="assets/studio-index-lab.svg" width="25%" align="top" alt="The lab — jump to expandable projects" /></picture></a><a href="#field-notes"><picture><source media="(max-width: 600px)" srcset="assets/studio-index-notes-mobile.svg" /><img src="assets/studio-index-notes.svg" width="25%" align="top" alt="Field notes — jump to writing and experiments" /></picture></a><a href="#say-hello"><picture><source media="(max-width: 600px)" srcset="assets/studio-index-hello-mobile.svg" /><img src="assets/studio-index-hello.svg" width="25%" align="top" alt="Say hello — jump to contact" /></picture></a>
+</div>
 
-<p align="center"><strong>Pick a door. Open a project. Follow the thread.</strong></p>
+<p align="center"><sub>Pick a door. Open a project. Follow the thread.</sub></p>
 
-<p align="center">
-  <a href="#the-patches"><img src="assets/nav-patches.svg" width="49%" alt="The patches — jump to upstream contributions" /></a>
-  <a href="#the-lab"><img src="assets/nav-lab.svg" width="49%" alt="The lab — jump to expandable projects" /></a><br />
-  <a href="#field-notes"><img src="assets/nav-notes.svg" width="49%" alt="Field notes — jump to writing and experiments" /></a>
-  <a href="#say-hello"><img src="assets/nav-hello.svg" width="49%" alt="Say hello — jump to contact" /></a>
-</p>
-
-**I’m Philip John Basile.** Principal AI systems engineer at **Basilcom Inc.**, open-source contributor, and still curious after **27+ years of shipping software**. I build AI systems teams can rely on, from enterprise agents to small code models and the runtimes behind local inference on Apple Silicon.
+**I’m Philip John Basile.** Principal AI systems engineer at **Basilcom Inc.**, open-source contributor, and a maker **since 1998**. I’ve worked on creative campaigns, commerce, telehealth, enterprise search, and mission planning. Today I build AI systems teams can rely on, from enterprise agents to small code models and the runtimes behind local inference on Apple Silicon.
 
 [Explore the full portfolio ↗](https://philipjohnbasile.com/) · [Try a live model ↗](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo) · [Browse my models & data ↗](https://huggingface.co/philipjohnbasile)
 
 <a name="the-patches"></a>
 
-## <img src="assets/studio-upstream.svg" width="100%" alt="01 / Upstream — Good code travels." />
+<h3><picture><source media="(max-width: 600px)" srcset="assets/connected-upstream-mobile.svg" /><img src="assets/connected-upstream.svg" width="100%" align="top" alt="01 / Upstream — Good code travels." /></picture></h3>
 
 I contribute to the tools I use. Start with three merged fixes in **Apple’s MLX and MLX-LM**:
 
@@ -54,16 +47,16 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 
 <a name="the-lab"></a>
 
-## <img src="assets/studio-work.svg" width="100%" alt="02 / The lab — Click a cover to open a project." />
+<h3><picture><source media="(max-width: 600px)" srcset="assets/connected-work-mobile.svg" /><img src="assets/connected-work.svg" width="100%" align="top" alt="02 / The lab — Click a cover to open a project." /></picture></h3>
 
-**These covers open.** Click or tap one to unfold the work, then launch its demo or follow the source. Keyboard: focus a cover and press <kbd>Enter</kbd>.
+The patches lead into the work itself: **training a model, making it run, and giving it useful tools**. Open a cover to explore the project, then launch the demo or follow the evidence. Keyboard: focus a cover and press <kbd>Enter</kbd>.
 
 <details>
 <summary><picture><source media="(max-width: 600px)" srcset="assets/case-wisp-mobile.svg" /><img src="assets/case-wisp.svg" width="93%" alt="Open or close case 01: Wisp Coder" /></picture></summary>
 
 ### A small model. The whole training story.
 
-I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 32K-token tokenizer, **108.2M parameters**, and **5 billion training tokens**, with fill-in-the-middle and native multi-token prediction.
+I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 32K-token tokenizer, **108.2M parameters**, and **5 billion training tokens**, with fill-in-the-middle and native multi-token prediction. The trunk has **100.7M parameters**; **108.2M** includes the MTP module.
 
 **Try this:** open the demo, edit the code around the cursor, and ask Wisp to fill the gap. The free CPU demo uses the standard decoder.
 
@@ -71,7 +64,7 @@ I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 
 
 [Model card & weights ↗](https://huggingface.co/philipjohnbasile/wisp-coder-110m) · [Training case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) · [Portfolio story ↗](https://philipjohnbasile.com/work/wisp-coder)
 
-*The record includes comparisons that didn’t favor Wisp. Small models should come with honest limits.*
+*The record includes comparisons that didn’t favor Wisp. The packaged MTP runtime checks correctness; the release does not claim a production MTP speedup.*
 
 </details>
 
@@ -80,7 +73,9 @@ I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 
 
 ### Connect the tools. Keep the boundaries.
 
-MCP integrations, reusable skills, identity, and approval workflows for the systems a business already uses. My platform work supports **120 staff across the UK, US, and APJ**, with **12+ production MCP integrations**.
+MCP integrations, reusable skills, identity, and approval workflows for the systems a business already uses. At **Basilecom / Transmission Agency**, my platform work supports **120 staff across the UK, US, and APJ**, with **12+ production MCP integrations**.
+
+The current open-source direction brings that work onto the desktop: isolated coding workspaces, bounded execution, and **one visible browser a person and an agent can use together**. The shared-browser work is **in progress**, with recovery and human takeover part of what is being built and qualified.
 
 **Explore this:** follow how access, tool contracts, operational controls, and adoption fit together in the case study.
 
@@ -152,14 +147,14 @@ Five examples of the work behind the project list:
 
 <a name="models-and-data"></a>
 
-## <img src="assets/studio-models.svg" width="100%" alt="03 / Models, data & demos — Take it for a spin." />
+<h3><a href="https://huggingface.co/spaces/philipjohnbasile/local-ai-guide"><picture><source media="(max-width: 600px)" srcset="assets/connected-models-mobile.svg" /><img src="assets/connected-models.svg" width="100%" align="top" alt="03 / Models, data & demos — Take it for a spin. Open the Local AI Guide." /></picture></a></h3>
 
-<a href="https://huggingface.co/spaces/philipjohnbasile/local-ai-guide"><img src="assets/launch-hub.svg" width="100%" alt="Launch the Apple Silicon AI collection — models, data, demos, and guides" /></a>
+This is where the model work lands: **original training, compression, MLX conversions, data, and live demos**. The Local AI Guide connects each release to its model card, inspected revision, runtime requirements, and evaluation records.
 
-Original models, MLX conversions, training data, live demos, and technical guides. The catalog connects releases to their model cards, inspected revisions, runtime requirements, and evaluation records.
+Start with [**Wisp’s code-completion playground**](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo), follow the [**Hy3 compression experiments**](https://huggingface.co/philipjohnbasile/hy3-demolition-mlx-reap25-v1), or inspect the [**training and calibration data**](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data).
 
 **20 public model repositories · 1 public dataset · 2 public Spaces**<br />
-<sub>Hugging Face Hub snapshot, September 10, 2026.</sub>
+<sub>Hugging Face Hub snapshot, September 11, 2026.</sub>
 
 [Models ↗](https://huggingface.co/philipjohnbasile/models) · [Training data ↗](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data) · [Full catalog ↗](DATA-AND-MODELS.md)
 
@@ -170,7 +165,7 @@ My [**Hugging Face**](https://huggingface.co/philipjohnbasile) work covers origi
 
 **20 public model repositories · 1 public dataset · 2 public Spaces · 11,388 monthly model downloads**
 
-*Hugging Face Hub snapshot, September 10, 2026; downloads summed across my public model repositories.*
+*Hugging Face Hub snapshot, September 11, 2026; downloads summed across my public model repositories.*
 
 **[Explore my Local AI Guide](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide).** I built a searchable catalog of the releases so you can browse by project, use case, artifact type, and download size. Each entry links to the model card, the inspected revision, and available evaluation records, with the runtime requirements explained alongside it.
 
@@ -206,11 +201,11 @@ I also group featured releases in [**Selected Work**](https://huggingface.co/col
 
 <a name="the-person"></a>
 
-## <img src="assets/studio-about.svg" width="100%" alt="04 / The person behind the patches — Still building." />
+<h3><picture><source media="(max-width: 600px)" srcset="assets/connected-about-mobile.svg" /><img src="assets/connected-about.svg" width="100%" align="top" alt="04 / The person behind the patches — Still building." /></picture></h3>
 
-I started building university websites at Fordham. Since then, I’ve worked across healthcare, enterprise systems, cybersecurity, and defense—turning complicated systems into things people can use.
+I started building university websites at **Fordham in 1998**. At **360i**, I worked on campaign experiences including **Oreo Daily Twist** and the Super Bowl blackout response; at **BaubleBar**, on commerce and launches. That is where my interest in craft, motion, and participation comes from.
 
-I work across architecture, implementation, performance, and team development. I care about correctness, clear boundaries, and leaving a path someone else can follow.
+Then came telehealth, clinical systems, enterprise search, cybersecurity, and mission planning. Today’s AI work draws on all of it: an interface should feel good to use, and the system behind it needs to hold up.
 
 [More about my background ↗](https://philipjohnbasile.com/about)
 
@@ -221,19 +216,23 @@ I started building university websites at Fordham. Since then, I've worked on **
 
 That range matters when a project gets complicated. I've had to balance user experience, sensitive data, uptime, budgets, and deadlines—and help other engineers do the same.
 
+At **Teladoc**, I worked on telehealth through its NYSE debut. At **IntegraMed**, on clinical systems and machine learning. The environments changed, but the work kept coming back to user experience, sensitive data, performance, and dependable releases.
+
 A few examples from my recent work:
 
 - **AI platform ownership:** Architecture and technical direction for a global agency, supporting 120 staff across the UK, US, and APJ, including 12+ production MCP integrations.
 - **Operating cost:** A Snowflake permissions and governance cleanup that reduced credit consumption by 35%, about £2,800 a month.
 - **Team development:** Led teams of 4–20 and coached five engineers into senior roles.
 
-[Career background and case studies](https://philipjohnbasile.com)
+I’m based in **New Rochelle**. Away from software, I’ve volunteered with the **Civil Air Patrol**, photographed staff portraits pro bono for **Pelham Children’s Center**, and spent years involved in **youth hockey**.
+
+[Full career record](https://philipjohnbasile.com/career) · [Career background and case studies](https://philipjohnbasile.com)
 
 </details>
 
 <a name="field-notes"></a>
 
-## <img src="assets/studio-writing.svg" width="100%" alt="05 / Field notes — Leave a paper trail." />
+<h3><picture><source media="(max-width: 600px)" srcset="assets/connected-writing-mobile.svg" /><img src="assets/connected-writing.svg" width="100%" align="top" alt="05 / Field notes — Leave a paper trail." /></picture></h3>
 
 - **[MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)**<br />What changes when a model can act on a company’s tools and data.
 - **[Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive)**<br />Eight practical missions covering agents, prompting, retrieval, evaluation, and tool use.

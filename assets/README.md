@@ -1,8 +1,10 @@
 # Profile artwork
 
-The current studio edition adds a short kinetic introduction, section navigation, and project covers that unfold with GitHub's native `details` / `summary` controls. Each open project has a real demo or case-study link. The mobile hero and project covers use `picture` sources.
+The current studio edition keeps the kinetic hero and illustrated project folders. Four adjacent image links form one paper navigation strip below the hero. Section headers share its grid and red spine, and the Hugging Face heading and launch panel form a single composition. Each project unfolds with GitHub's native `details` / `summary` controls and links to its real demo or case study.
 
-Rebuild the current edition with `python3 scripts/build-studio-art.py` (requires `fonttools`). Its SVGs contain no scripts or external resources. CSS motion stops within 4.5 seconds and is disabled by `prefers-reduced-motion`; the layout and every link remain usable without animation.
+Rebuild the current edition with `python3 scripts/build-connected-studio-art.py` (requires `fonttools`). This first runs the original studio builder, preserving its hero and project covers, then builds the joined index and connected section artwork. Its SVGs contain no scripts or external resources. CSS motion stops within 4.5 seconds and is disabled by `prefers-reduced-motion`; the layout and every link remain usable without animation.
+
+The masthead uses adjacent links without intervening whitespace and top-aligned images so it joins at every viewport width. Its four mobile sources keep each destination within a large tap target. The model-panel counts are a September 11, 2026 public Hub snapshot, not live counters.
 
 The `picture` wrappers inside project summaries are intentional: they stop GitHub from automatically linking the cover image to its image viewer, which would intercept the click intended to expand the project.
 
