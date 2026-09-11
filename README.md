@@ -1,12 +1,35 @@
-# Philip John Basile
+<h1>
+  <a href="https://philipjohnbasile.com/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="assets/profile-hero-mobile.svg" />
+      <img src="assets/profile-hero.svg" width="100%" alt="Philip John Basile — Make something matter. AI engineer and open-source contributor." />
+    </picture>
+  </a>
+</h1>
 
-I'm a principal AI systems engineer at **Basilcom Inc.**, with **27+ years of building and shipping software**. My work has taken me through healthcare, enterprise systems, cybersecurity, and defense. Today I build AI platforms for businesses, train my own models, and work on the runtimes that let large models run locally on Apple Silicon.
+<p align="center">
+  <a href="https://philipjohnbasile.com/work"><strong>WORK ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://philipjohnbasile.com/open-source"><strong>OPEN SOURCE ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://philipjohnbasile.com/writing"><strong>WRITING ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://philipjohnbasile.com/about"><strong>ABOUT ↗</strong></a>
+</p>
 
-I work across architecture, implementation, performance, and team development. The [case studies](https://github.com/PhilipJohnBasile/engineering-case-studies) show how I approach that work.
+**I’m Philip John Basile.** I’m a principal AI systems engineer at **Basilcom Inc.**, building AI systems that teams can rely on and contributing to the open-source tools that make them possible.
 
-[![Hugging Face](https://img.shields.io/badge/Hugging_Face-Models_%26_Data-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/philipjohnbasile) [![Writing](https://img.shields.io/badge/Medium-Writing-12100E?style=flat-square&logo=medium&logoColor=white)](https://philipjohnbasile.medium.com/) [![Sponsor](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/PhilipJohnBasile)
+From enterprise agents to small code models and Apple Silicon. I work across architecture, implementation, performance, and team development, with **27+ years of building and shipping software** behind it.
 
-## Open-source contributions
+## <img src="assets/section-upstream.svg" width="100%" alt="01 / Contributing upstream — Good code travels." />
+
+I contribute to the tools I use. Three merged fixes in **Apple’s MLX and MLX-LM**:
+
+- **[Correct results beyond 32K rows ↗](https://github.com/ml-explore/mlx/pull/3922)** · Apple MLX #3922<br />Fixed row-count overflow in sorted quantized matrix multiplication.
+- **[Repair quantized loader indexing ↗](https://github.com/ml-explore/mlx/pull/4202)** · Apple MLX #4202<br />Corrected scale and bias indexing for small quantization groups.
+- **[Keep converted Qwen weights correct ↗](https://github.com/ml-explore/mlx-lm/pull/1623)** · Apple MLX-LM #1623<br />Prevented a second normalization shift during model conversion.
+
+I also work on **Unsloth Studio, MTPLX, oMLX, and AirRunner’s MLX-LM**.
+
+<details>
+<summary><strong>More upstream work — patches, projects, and status</strong></summary>
 
 I contribute to the tools I use. That includes merged fixes in **Apple's MLX and MLX-LM**, along with ongoing work on **Unsloth Studio**, **MTPLX**, and **oMLX**.
 
@@ -23,7 +46,86 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 
 [See my upstream pull requests](https://github.com/search?q=is%3Apublic+is%3Apr+author%3APhilipJohnBasile+-user%3APhilipJohnBasile&type=pullrequests)
 
-## Hugging Face contributions
+</details>
+
+## <img src="assets/section-work.svg" width="100%" alt="02 / Selected work — Less talk. More built." />
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<sub>OPEN SOURCE / MODEL TRAINING</sub>
+<h3><a href="https://philipjohnbasile.com/work/wisp-coder">WISP CODER ↗</a></h3>
+<p>A code model I trained from scratch on Apple Silicon, with fill-in-the-middle and native multi-token prediction.</p>
+<p><code>MLX</code> <code>108.2M parameters</code></p>
+<p><a href="https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo">Try the demo</a> · <a href="https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md">Read the experiments</a></p>
+</td>
+<td width="50%" valign="top">
+<sub>ENTERPRISE AI / AGENT SYSTEMS</sub>
+<h3><a href="https://philipjohnbasile.com/mcp-agent-platform">ENTERPRISE AGENT PLATFORM ↗</a></h3>
+<p>MCP integrations, reusable skills, and approval workflows connecting AI to the systems a business already uses.</p>
+<p><code>MCP</code> <code>Agents</code> <code>Identity</code></p>
+<p><a href="https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md">Read the case study</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<sub>OPEN SOURCE / APPLE SILICON</sub>
+<h3><a href="https://philipjohnbasile.com/work/local-inference">LOCAL INFERENCE ON THE MAC ↗</a></h3>
+<p>MLX conversions, native MTP work in MTPLX, and SSD-backed expert streaming with iliria.</p>
+<p><code>MLX + Metal</code> <code>Inference</code></p>
+<p><a href="https://github.com/PhilipJohnBasile/iliria">Explore iliria</a> · <a href="https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md">Measurement notes</a></p>
+</td>
+<td width="50%" valign="top">
+<sub>ENTERPRISE AI / EVALUATION</sub>
+<h3><a href="https://philipjohnbasile.com/rag-eval-harness">RETRIEVAL WITH RELEASE CHECKS ↗</a></h3>
+<p>RAG systems with evaluation across retrieval, answer grounding, latency, cost, and regression behavior.</p>
+<p><code>RAG</code> <code>Evaluation</code> <code>Reliability</code></p>
+<p><a href="https://philipjohnbasile.com/rag-eval-harness">Explore the system</a></p>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><strong>More projects — iliria, racecontrol, CallSieve, VecStore, and PhilJS</strong></summary>
+
+- [**iliria**](https://github.com/PhilipJohnBasile/iliria): C/Metal inference that streams large MoE models from SSD, built on colibri. I also published the [GLM-5.2 int4 container](https://huggingface.co/philipjohnbasile/GLM-5.2-colibri-int4-with-int8-mtp) it serves.
+- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol): routing and failure recovery across local inference engines, with a runnable HTTP demo.
+- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve): local code retrieval for coding agents, with CLI and MCP interfaces.
+- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore): embedded vector search with metadata filtering and persistence.
+- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs): an experimental TypeScript UI framework with a dependency-free signals demo.
+
+[More projects, model experiments, and creative work](PROJECTS.md)
+
+</details>
+
+<details>
+<summary><strong>Five engineering case studies — decisions, evidence, and limitations</strong></summary>
+
+Browse the [engineering case studies](https://github.com/PhilipJohnBasile/engineering-case-studies).
+
+Five examples of the work behind the project list:
+
+- [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
+- [**Training and releasing Wisp Coder**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md): tokenizer training, model pretraining, runtime compatibility, and controlled experiments.
+- [**Taking training data into model releases**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/data-to-models.md): data imports with source records, verification tools, expert-pruning calibration, and measured model tradeoffs.
+- [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
+- [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
+
+</details>
+
+## <img src="assets/section-models.svg" width="100%" alt="03 / Models, data & demos — Local AI. Shared progress." />
+
+**[Explore the whole Apple Silicon AI collection ↗](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide)**
+
+Original models, MLX conversions, training data, live demos, and technical guides. My Local AI Guide connects the releases to their model cards, inspected revisions, runtime requirements, and evaluation records.
+
+**20 public model repositories · 1 public dataset · 2 public Spaces**<br />
+<sub>Hugging Face Hub snapshot, September 10, 2026.</sub>
+
+[Models ↗](https://huggingface.co/philipjohnbasile/models) · [Training data ↗](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data) · [Try Wisp ↗](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo) · [Full catalog ↗](DATA-AND-MODELS.md)
+
+<details>
+<summary><strong>Model training, conversions, datasets, and published results</strong></summary>
 
 My [**Hugging Face**](https://huggingface.co/philipjohnbasile) work covers original models, conversions, experimental derivatives, and training data. I work on both the models themselves and the engineering needed to run them locally.
 
@@ -61,7 +163,18 @@ I also group featured releases in [**Selected Work**](https://huggingface.co/col
 
 [Browse all models](https://huggingface.co/philipjohnbasile/models) · [Browse datasets](https://huggingface.co/philipjohnbasile/datasets)
 
-## The career behind the code
+</details>
+
+## <img src="assets/section-about.svg" width="100%" alt="04 / The person behind the patches — Still building. Still questioning." />
+
+I started building university websites at Fordham. Since then, I’ve worked across healthcare, enterprise systems, cybersecurity, and defense—turning complicated systems into things people can use.
+
+That range shapes how I build AI: correctness, clear boundaries, and a path someone else can follow. I stay close to the code and help other engineers do the same.
+
+[More about my background ↗](https://philipjohnbasile.com/about)
+
+<details>
+<summary><strong>The career behind the code — platforms, outcomes, and team development</strong></summary>
 
 I started building university websites at Fordham. Since then, I've worked on **IBM's enterprise search**, **Atlas Air's flight scheduling**, **Dragos's cybersecurity products**, and **U.S. Air Force mission-planning software** through client engagements. My healthcare work includes **Teladoc** and **IntegraMed**; earlier, I helped build commerce at **BaubleBar** and campaign experiences at **360i**.
 
@@ -75,28 +188,18 @@ A few examples from my recent work:
 
 [Career background and case studies](https://philipjohnbasile.com)
 
-## Engineering case studies
+</details>
 
-Five examples of the work behind the project list:
+## <img src="assets/section-writing.svg" width="100%" alt="05 / Notes from the work — Leave a paper trail." />
 
-- [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
-- [**Training and releasing Wisp Coder**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md): tokenizer training, model pretraining, runtime compatibility, and controlled experiments.
-- [**Taking training data into model releases**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/data-to-models.md): data imports with source records, verification tools, expert-pruning calibration, and measured model tradeoffs.
-- [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
-- [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
+- **[MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)**<br />What changes when a model can act on a company’s tools and data.
+- **[Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive)**<br />Eight practical missions covering agents, prompting, retrieval, evaluation, and tool use.
+- **[What the Wisp experiments showed ↗](https://huggingface.co/philipjohnbasile/wisp-coder-110m/blob/5919d57a7672623d8afc066032794359350e2ed2/fim-competitive-v1/FIM_RESULTS.md)**<br />Methods, comparisons, null results, and the limits of a small code model.
 
-## Selected projects
+[More writing ↗](https://philipjohnbasile.com/writing) · [Medium ↗](https://philipjohnbasile.medium.com/)
 
-- [**iliria**](https://github.com/PhilipJohnBasile/iliria): C/Metal inference that streams large MoE models from SSD, built on colibri. I also published the [GLM-5.2 int4 container](https://huggingface.co/philipjohnbasile/GLM-5.2-colibri-int4-with-int8-mtp) it serves.
-- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol): routing and failure recovery across local inference engines, with a runnable HTTP demo.
-- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve): local code retrieval for coding agents, with CLI and MCP interfaces.
-- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore): embedded vector search with metadata filtering and persistence.
-- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs): an experimental TypeScript UI framework with a dependency-free signals demo.
-
-[More projects, model experiments, and creative work](PROJECTS.md)
-
-## Say hello
+<a href="https://philipjohnbasile.com/contact"><img src="assets/contact.svg" width="100%" alt="Let’s make a useful dent. Start a conversation." /></a>
 
 I'm interested in principal and staff engineering roles where I can own the architecture, stay close to the code, and help a team ship useful AI systems. If that sounds like your team—or you've tried one of these projects—I'd like to hear from you.
 
-[Email](mailto:PBasile@Basilecom.com) · [Portfolio](https://philipjohnbasile.com) · [Hugging Face](https://huggingface.co/philipjohnbasile) · [Writing](https://philipjohnbasile.medium.com/) · [More links](https://linktr.ee/philipjohnbasile) · [Support my open-source work](https://github.com/sponsors/PhilipJohnBasile)
+[Email](mailto:PBasile@Basilecom.com) · [Portfolio](https://philipjohnbasile.com) · [Hugging Face](https://huggingface.co/philipjohnbasile) · [Writing](https://philipjohnbasile.com/writing) · [More links](https://linktr.ee/philipjohnbasile) · [Support my open-source work](https://github.com/sponsors/PhilipJohnBasile)
