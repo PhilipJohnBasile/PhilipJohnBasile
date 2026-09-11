@@ -1,5 +1,13 @@
 # Profile artwork
 
+The current studio edition adds a short kinetic introduction, section navigation, and project covers that unfold with GitHub's native `details` / `summary` controls. Each open project has a real demo or case-study link. The mobile hero and project covers use `picture` sources.
+
+Rebuild the current edition with `python3 scripts/build-studio-art.py` (requires `fonttools`). Its SVGs contain no scripts or external resources. CSS motion stops within 4.5 seconds and is disabled by `prefers-reduced-motion`; the layout and every link remain usable without animation.
+
+The `picture` wrappers inside project summaries are intentional: they stop GitHub from automatically linking the cover image to its image viewer, which would intercept the click intended to expand the project.
+
+The original street-art edition and its build script are retained below as source material.
+
 Adapted from the live street-art edition of [philipjohnbasile.com](https://philipjohnbasile.com/).
 
 - Palette: paper `#e8e5dd`, ink `#191918`, red `#b7251d`.
