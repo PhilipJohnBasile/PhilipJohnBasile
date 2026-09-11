@@ -1,68 +1,41 @@
 <a name="top"></a>
 
-<details>
-<summary><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-hero-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-hero-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-hero-mobile-light.svg" />
-  <img src="assets/field-hero-light.svg" width="93%" alt="Philip John Basile — Make something matter. Click or press Enter to unfold the connections behind my work." />
-</picture></summary>
+<h1><a href="#the-lab"><picture>
+  <source media="(max-width: 600px)" srcset="assets/studio-hero-mobile.svg" />
+  <img src="assets/studio-hero.svg" width="100%" alt="Philip John Basile — Make something matter. Open the project lab below." />
+</picture></a></h1>
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-connections-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-connections-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-connections-mobile-light.svg" />
-  <img src="assets/field-connections-light.svg" width="100%" alt="Data → models → runtimes → agents → people. The whole system is the work." />
-</picture>
-
-### The whole system is the work.
-
-I want to understand what happens all the way from a training example to a person getting something done. That takes me from **datasets and small models** into **MLX and Metal**, then back up through **retrieval, agents, and the interfaces people actually touch**.
-
-Follow a connection: [the data](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data) → [the model](https://huggingface.co/philipjohnbasile/wisp-coder-110m) → [the runtime](#the-patches) → [the agent](#the-lab) → [the person](#the-person).
-
-Those links cross different projects. Together, they show the direction of the work.
-
-</details>
+<p align="center"><strong>Pick a door. Open a project. Follow the thread.</strong></p>
 
 <p align="center">
-  <a href="#the-patches">The code</a> &nbsp; / &nbsp;
-  <a href="#models-and-data">The models</a> &nbsp; / &nbsp;
-  <a href="#the-lab">The systems</a> &nbsp; / &nbsp;
-  <a href="#the-person">The person</a> &nbsp; / &nbsp;
-  <a href="#field-notes">The notes</a>
+  <a href="#the-patches"><img src="assets/nav-patches.svg" width="49%" alt="The patches — jump to upstream contributions" /></a>
+  <a href="#the-lab"><img src="assets/nav-lab.svg" width="49%" alt="The lab — jump to expandable projects" /></a><br />
+  <a href="#field-notes"><img src="assets/nav-notes.svg" width="49%" alt="Field notes — jump to writing and experiments" /></a>
+  <a href="#say-hello"><img src="assets/nav-hello.svg" width="49%" alt="Say hello — jump to contact" /></a>
 </p>
 
-**I’m Philip John Basile.** Principal AI systems engineer at **Basilcom Inc.**, open-source contributor, and a maker since **1998**. I’ve built campaign experiences, commerce, telehealth, enterprise search, and mission-planning systems. Today I build models, contribute to Apple’s MLX, and work on the runtimes and agents that make local AI useful.
+**I’m Philip John Basile.** Principal AI systems engineer at **Basilcom Inc.**, open-source contributor, and still curious after **27+ years of shipping software**. I build AI systems teams can rely on, from enterprise agents to small code models and the runtimes behind local inference on Apple Silicon.
 
-I care about how a system feels to use, what happens when it fails, and whether someone else can understand what I built.
-
-[The wider portfolio ↗](https://philipjohnbasile.com/) · [Hugging Face ↗](https://huggingface.co/philipjohnbasile) · [Say hello ↓](#say-hello)
+[Explore the full portfolio ↗](https://philipjohnbasile.com/) · [Try a live model ↗](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo) · [Browse my models & data ↗](https://huggingface.co/philipjohnbasile)
 
 <a name="the-patches"></a>
 
-<h3><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-upstream-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-upstream-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-upstream-mobile-light.svg" />
-  <img src="assets/field-upstream-light.svg" width="100%" alt="01 / Contributing upstream — Good code travels." />
-</picture></h3>
+## <img src="assets/studio-upstream.svg" width="100%" alt="01 / Upstream — Good code travels." />
 
-I contribute to the tools I use. Three merged fixes in **Apple’s MLX and MLX-LM**:
+I contribute to the tools I use. Start with three merged fixes in **Apple’s MLX and MLX-LM**:
 
-**[MLX #3922 — beyond 32K rows ↗](https://github.com/ml-explore/mlx/pull/3922)**<br />
-Correct row-count overflow in sorted quantized matrix multiplication.
-
-**[MLX #4202 — the small-group boundary ↗](https://github.com/ml-explore/mlx/pull/4202)**<br />
-Correct scale and bias indexing for small quantization groups.
-
-**[MLX-LM #1623 — keep converted weights correct ↗](https://github.com/ml-explore/mlx-lm/pull/1623)**<br />
-Prevent a second normalization shift when converting Qwen weights.
+| Merged patch | What changed |
+| --- | --- |
+| **[MLX #3922 ↗](https://github.com/ml-explore/mlx/pull/3922)** | Correct results beyond 32K rows in sorted quantized matrix multiplication. |
+| **[MLX #4202 ↗](https://github.com/ml-explore/mlx/pull/4202)** | Correct scale and bias indexing for small quantization groups. |
+| **[MLX-LM #1623 ↗](https://github.com/ml-explore/mlx-lm/pull/1623)** | Prevent a second normalization shift when converting Qwen weights. |
 
 [All upstream work ↗](https://philipjohnbasile.com/open-source)
 
 <details>
-<summary><strong>Follow the upstream work — Unsloth, MTPLX, oMLX, and more</strong></summary>
+<summary><strong>Pull out the full patch drawer — Unsloth, MTPLX, oMLX, and more</strong></summary>
+
+I contribute to the tools I use. That includes merged fixes in **Apple's MLX and MLX-LM**, along with ongoing work on **Unsloth Studio**, **MTPLX**, and **oMLX**.
 
 | Project | What I've been working on | Status |
 |---|---|---|
@@ -79,40 +52,125 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 
 </details>
 
-<a name="models-and-data"></a>
+<a name="the-lab"></a>
 
-<h3><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-models-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-models-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-models-mobile-light.svg" />
-  <img src="assets/field-models-light.svg" width="100%" alt="02 / Hugging Face — The model is a beginning." />
-</picture></h3>
+## <img src="assets/studio-work.svg" width="100%" alt="02 / The lab — Click a cover to open a project." />
 
-My Hugging Face work connects original training, model compression, Apple Silicon conversions, and the data behind them. I publish the usable artifacts alongside the methods, runtime requirements, and limits.
-
-**20 models · 1 dataset · 2 Spaces** · [Explore the Local AI Guide ↗](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide)<br />
-<sub>Public Hugging Face repositories, checked September 11, 2026.</sub>
-
-### Start with something you can try.
-
-**[Wisp Coder — mind the gap ↗](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo)**<br />
-A small code model I trained from step zero on Apple Silicon. Give it the code on either side of a cursor and see what it puts in the middle. The [model card](https://huggingface.co/philipjohnbasile/wisp-coder-110m) follows the whole experiment, including what didn’t work.
-
-**[Hy3 & GLM — what can we make smaller? ↗](https://huggingface.co/philipjohnbasile/hy3-demolition-mlx-reap25-v1)**<br />
-Expert pruning, LoRA recovery, quantization, and the tradeoffs that come with them. Smaller weights are only useful if you can see what changed in the model.
-
-**[Qwen & Ornith — bring the weights home ↗](https://huggingface.co/philipjohnbasile/Qwen3.6-27B-Fable-Fusion-711-MTPLX-6bit)**<br />
-MLX conversions and MTP calibration, with source provenance and the runtime recipes needed to reproduce the result.
-
-**[Training data — follow the ingredients ↗](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data)**<br />
-Code, tool use, repair, adapters, and calibration data. The [data-to-model story](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/data-to-models.md) connects the preparation tools to the published experiments.
-
-[Models ↗](https://huggingface.co/philipjohnbasile/models) · [Full catalog ↗](DATA-AND-MODELS.md)
+**These covers open.** Click or tap one to unfold the work, then launch its demo or follow the source. Keyboard: focus a cover and press <kbd>Enter</kbd>.
 
 <details>
-<summary><strong>Go deeper — model families, calibration, provenance, and results</strong></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-wisp-mobile.svg" /><img src="assets/case-wisp.svg" width="93%" alt="Open or close case 01: Wisp Coder" /></picture></summary>
+
+### A small model. The whole training story.
+
+I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 32K-token tokenizer, **108.2M parameters**, and **5 billion training tokens**, with fill-in-the-middle and native multi-token prediction.
+
+**Try this:** open the demo, edit the code around the cursor, and ask Wisp to fill the gap. The free CPU demo uses the standard decoder.
+
+<a href="https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo"><picture><source media="(max-width: 600px)" srcset="assets/launch-wisp-mobile.svg" /><img src="assets/launch-wisp.svg" width="100%" alt="Try Wisp in your browser — opens the live demo" /></picture></a>
+
+[Model card & weights ↗](https://huggingface.co/philipjohnbasile/wisp-coder-110m) · [Training case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) · [Portfolio story ↗](https://philipjohnbasile.com/work/wisp-coder)
+
+*The record includes comparisons that didn’t favor Wisp. Small models should come with honest limits.*
+
+</details>
+
+<details>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-agents-mobile.svg" /><img src="assets/case-agents.svg" width="93%" alt="Open or close case 02: Agent Systems" /></picture></summary>
+
+### Connect the tools. Keep the boundaries.
+
+MCP integrations, reusable skills, identity, and approval workflows for the systems a business already uses. My platform work supports **120 staff across the UK, US, and APJ**, with **12+ production MCP integrations**.
+
+**Explore this:** follow how access, tool contracts, operational controls, and adoption fit together in the case study.
+
+<a href="https://philipjohnbasile.com/mcp-agent-platform"><picture><source media="(max-width: 600px)" srcset="assets/launch-agents-mobile.svg" /><img src="assets/launch-agents.svg" width="100%" alt="Explore the agent platform — opens the portfolio case study" /></picture></a>
+
+[Engineering case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md) · [MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)
+
+</details>
+
+<details>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-local-mobile.svg" /><img src="assets/case-local.svg" width="93%" alt="Open or close case 03: Local Inference" /></picture></summary>
+
+### Closer to the hardware.
+
+MLX conversions, native multi-token prediction in **MTPLX**, and SSD-backed expert streaming with **iliria**. The work spans runtime behavior, weights, memory, and storage.
+
+**Explore this:** start with the architecture, then inspect source revisions, runtime recipes, and published measurement records before choosing a model.
+
+<a href="https://philipjohnbasile.com/work/local-inference"><picture><source media="(max-width: 600px)" srcset="assets/launch-local-mobile.svg" /><img src="assets/launch-local.svg" width="100%" alt="Explore local inference — opens the portfolio case study" /></picture></a>
+
+[iliria source ↗](https://github.com/PhilipJohnBasile/iliria) · [Measuring inference fairly ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md) · [Apple Silicon AI catalog ↗](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide)
+
+</details>
+
+<details>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-rag-mobile.svg" /><img src="assets/case-rag.svg" width="93%" alt="Open or close case 04: RAG & Releases" /></picture></summary>
+
+### Make retrieval earn its place in production.
+
+RAG systems with evaluation across **retrieval, answer grounding, latency, cost, and regression behavior**. The useful part is the release process around the answer.
+
+**Explore this:** follow the retrieval and evaluation loop, including the checks used to catch regressions before release.
+
+<a href="https://philipjohnbasile.com/rag-eval-harness"><picture><source media="(max-width: 600px)" srcset="assets/launch-rag-mobile.svg" /><img src="assets/launch-rag.svg" width="100%" alt="Explore the RAG system — opens the portfolio case study" /></picture></a>
+
+[Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive) · [More engineering case studies ↗](https://github.com/PhilipJohnBasile/engineering-case-studies)
+
+</details>
+
+<details>
+<summary><strong>Open the toolbox — iliria, racecontrol, CallSieve, VecStore, and PhilJS</strong></summary>
+
+- [**iliria**](https://github.com/PhilipJohnBasile/iliria): C/Metal inference that streams large MoE models from SSD, built on colibri. I also published the [GLM-5.2 int4 container](https://huggingface.co/philipjohnbasile/GLM-5.2-colibri-int4-with-int8-mtp) it serves.
+- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol): routing and failure recovery across local inference engines, with a runnable HTTP demo.
+- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve): local code retrieval for coding agents, with CLI and MCP interfaces.
+- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore): embedded vector search with metadata filtering and persistence.
+- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs): an experimental TypeScript UI framework with a dependency-free signals demo.
+
+[More projects, model experiments, and creative work](PROJECTS.md)
+
+</details>
+
+<details>
+<summary><strong>Inspect the evidence — five engineering case studies</strong></summary>
+
+Browse the [engineering case studies](https://github.com/PhilipJohnBasile/engineering-case-studies).
+
+Five examples of the work behind the project list:
+
+- [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
+- [**Training and releasing Wisp Coder**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md): tokenizer training, model pretraining, runtime compatibility, and controlled experiments.
+- [**Taking training data into model releases**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/data-to-models.md): data imports with source records, verification tools, expert-pruning calibration, and measured model tradeoffs.
+- [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
+- [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
+
+</details>
+
+[All projects ↗](https://philipjohnbasile.com/work) · [↑ Back to the doors](#top)
+
+<a name="models-and-data"></a>
+
+## <img src="assets/studio-models.svg" width="100%" alt="03 / Models, data & demos — Take it for a spin." />
+
+<a href="https://huggingface.co/spaces/philipjohnbasile/local-ai-guide"><img src="assets/launch-hub.svg" width="100%" alt="Launch the Apple Silicon AI collection — models, data, demos, and guides" /></a>
+
+Original models, MLX conversions, training data, live demos, and technical guides. The catalog connects releases to their model cards, inspected revisions, runtime requirements, and evaluation records.
+
+**20 public model repositories · 1 public dataset · 2 public Spaces**<br />
+<sub>Hugging Face Hub snapshot, September 10, 2026.</sub>
+
+[Models ↗](https://huggingface.co/philipjohnbasile/models) · [Training data ↗](https://huggingface.co/datasets/philipjohnbasile/glm52-demolition-data) · [Full catalog ↗](DATA-AND-MODELS.md)
+
+<details>
+<summary><strong>Unpack the releases — training, conversions, datasets, and results</strong></summary>
 
 My [**Hugging Face**](https://huggingface.co/philipjohnbasile) work covers original models, conversions, experimental derivatives, and training data. I work on both the models themselves and the engineering needed to run them locally.
+
+**20 public model repositories · 1 public dataset · 2 public Spaces · 11,388 monthly model downloads**
+
+*Hugging Face Hub snapshot, September 10, 2026; downloads summed across my public model repositories.*
 
 **[Explore my Local AI Guide](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide).** I built a searchable catalog of the releases so you can browse by project, use case, artifact type, and download size. Each entry links to the model card, the inspected revision, and available evaluation records, with the runtime requirements explained alongside it.
 
@@ -146,194 +204,36 @@ I also group featured releases in [**Selected Work**](https://huggingface.co/col
 
 </details>
 
-<a name="the-lab"></a>
-
-<h3><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-work-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-work-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-work-mobile-light.svg" />
-  <img src="assets/field-work-light.svg" width="100%" alt="03 / Runtimes, agents & production — Make the whole thing work." />
-</picture></h3>
-
-The model is one part. The rest is memory, tools, retrieval, failure recovery, and the moment a person needs to take over. These are the systems I’m working across. **Open a title to follow the work.**
-
-<details>
-<summary><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-case-wisp-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-case-wisp-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-case-wisp-mobile-light.svg" />
-  <img src="assets/field-case-wisp-light.svg" width="93%" alt="Open or close case 01: Wisp Coder" />
-</picture></summary>
-
-### From step zero to the cursor.
-
-I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 32K-token tokenizer, **108.2M parameters**, and **5 billion training tokens**, with fill-in-the-middle and native multi-token prediction.
-
-**Try this:** open the demo, edit the code around the cursor, and ask Wisp to fill the gap. The free CPU demo uses the standard decoder.
-
-**[Try Wisp in your browser ↗](https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo)**
-
-[Model card & weights ↗](https://huggingface.co/philipjohnbasile/wisp-coder-110m) · [Training case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) · [Portfolio story ↗](https://philipjohnbasile.com/work/wisp-coder)
-
-*100.7M trunk parameters; 108.2M with the MTP module. The standard demo does not use that module. The release includes negative results and does not claim a production MTP speedup.*
-
-</details>
-
-<details>
-<summary><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-case-agents-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-case-agents-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-case-agents-mobile-light.svg" />
-  <img src="assets/field-case-agents-light.svg" width="93%" alt="Open or close case 02: Agent Systems" />
-</picture></summary>
-
-### Give the model useful tools. Keep people in control.
-
-At **Basilecom / Transmission Agency**, I own AI platform architecture for **120 staff across the UK, US, and APJ**, with **12+ production MCP integrations**. That work connects business tools, identity, retrieval, evaluation, and human approval.
-
-My current open-source direction takes that question onto the desktop: coding agents that can work in an isolated project, run checks, and share a visible browser with the person using them. **The shared-browser work is in progress.** Recovery, inspection, and a clear handoff between person and agent are part of the work.
-
-**Explore this:** follow how access, tool contracts, operational controls, and adoption fit together in the case study.
-
-**[Explore the agent platform ↗](https://philipjohnbasile.com/mcp-agent-platform)**
-
-[Engineering case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md) · [MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)
-
-</details>
-
-<details>
-<summary><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-case-local-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-case-local-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-case-local-mobile-light.svg" />
-  <img src="assets/field-case-local-light.svg" width="93%" alt="Open or close case 03: Local Inference" />
-</picture></summary>
-
-### Closer to the hardware.
-
-MLX conversions, native multi-token prediction in **MTPLX**, and SSD-backed expert streaming with **iliria**. The work spans runtime behavior, weights, memory, and storage.
-
-**Explore this:** start with the architecture, then inspect source revisions, runtime recipes, and published measurement records before choosing a model.
-
-**[Explore local inference ↗](https://philipjohnbasile.com/work/local-inference)**
-
-[iliria source ↗](https://github.com/PhilipJohnBasile/iliria) · [Measuring inference fairly ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md) · [Apple Silicon AI catalog ↗](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide)
-
-</details>
-
-<details>
-<summary><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-case-rag-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-case-rag-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-case-rag-mobile-light.svg" />
-  <img src="assets/field-case-rag-light.svg" width="93%" alt="Open or close case 04: RAG & Releases" />
-</picture></summary>
-
-### Make retrieval earn its place in production.
-
-RAG systems with evaluation across **retrieval, answer grounding, latency, cost, and regression behavior**. The useful part is the release process around the answer.
-
-**Explore this:** follow the retrieval and evaluation loop, including the checks used to catch regressions before release.
-
-**[Explore the RAG system ↗](https://philipjohnbasile.com/rag-eval-harness)**
-
-[Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive) · [More engineering case studies ↗](https://github.com/PhilipJohnBasile/engineering-case-studies)
-
-</details>
-
-<details>
-<summary><strong>More things I build — iliria, racecontrol, CallSieve, VecStore, and PhilJS</strong></summary>
-
-- [**iliria**](https://github.com/PhilipJohnBasile/iliria): C/Metal inference that streams large MoE models from SSD, built on colibri. I also published the [GLM-5.2 int4 container](https://huggingface.co/philipjohnbasile/GLM-5.2-colibri-int4-with-int8-mtp) it serves.
-- [**racecontrol**](https://github.com/PhilipJohnBasile/racecontrol): routing and failure recovery across local inference engines, with a runnable HTTP demo.
-- [**CallSieve**](https://github.com/PhilipJohnBasile/callsieve): local code retrieval for coding agents, with CLI and MCP interfaces.
-- [**VecStore**](https://github.com/PhilipJohnBasile/vecstore): embedded vector search with metadata filtering and persistence.
-- [**PhilJS**](https://github.com/PhilipJohnBasile/philjs): an experimental TypeScript UI framework with a dependency-free signals demo.
-
-[More projects, model experiments, and creative work](PROJECTS.md)
-
-</details>
-
-<details>
-<summary><strong>Read the evidence — five engineering case studies</strong></summary>
-
-Browse the [engineering case studies](https://github.com/PhilipJohnBasile/engineering-case-studies).
-
-Five examples of the work behind the project list:
-
-- [**Fixing a Metal quantization bug in Apple MLX**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/mlx-quantized-matmul.md): the boundary case, root cause, final upstream change, and regression tests.
-- [**Training and releasing Wisp Coder**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md): tokenizer training, model pretraining, runtime compatibility, and controlled experiments.
-- [**Taking training data into model releases**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/data-to-models.md): data imports with source records, verification tools, expert-pruning calibration, and measured model tradeoffs.
-- [**Measuring local inference fairly**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md): matching outputs and workloads, separating streaming behavior from speed, and reporting the actual margin.
-- [**Connecting enterprise systems to AI agents**](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md): integrations, identity, operational controls, and adoption across a global agency.
-
-</details>
-
-[All projects ↗](https://philipjohnbasile.com/work) · [↑ Back to the beginning](#top)
-
 <a name="the-person"></a>
 
-<h3><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-about-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-about-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-about-mobile-light.svg" />
-  <img src="assets/field-about-light.svg" width="100%" alt="04 / The person — A long way from hello world." />
-</picture></h3>
+## <img src="assets/studio-about.svg" width="100%" alt="04 / The person behind the patches — Still building." />
 
-I was building university websites at **Fordham in 1998**, while studying computer science. I’ve stayed close to the code ever since. The work has changed; the pull toward making something useful and interesting has stayed.
+I started building university websites at Fordham. Since then, I’ve worked across healthcare, enterprise systems, cybersecurity, and defense—turning complicated systems into things people can use.
 
-The creative work taught me to care about the audience. Healthcare and enterprise taught me what reliability costs. Today’s AI work draws on both.
+I work across architecture, implementation, performance, and team development. I care about correctness, clear boundaries, and leaving a path someone else can follow.
+
+[More about my background ↗](https://philipjohnbasile.com/about)
 
 <details>
-<summary><strong>01 · The creative years — 360i, campaigns, and commerce</strong></summary>
+<summary><strong>Open the backstory — platforms, outcomes, and team development</strong></summary>
 
-At **360i / Dentsu**, I worked on campaign experiences including **Oreo Daily Twist**, the Super Bowl blackout response, **Oscar Mayer Bacon Barter**, and **Coca-Cola Polar Bowl**. Later, as the first technical hire at **BaubleBar**, I worked on the commerce platform and launch experiences.
+I started building university websites at Fordham. Since then, I've worked on **IBM's enterprise search**, **Atlas Air's flight scheduling**, **Dragos's cybersecurity products**, and **U.S. Air Force mission-planning software** through client engagements. My healthcare work includes **Teladoc** and **IntegraMed**; earlier, I helped build commerce at **BaubleBar** and campaign experiences at **360i**.
 
-That is where the appetite for motion, timing, and participation comes from. An interface can have personality and still do its job.
+That range matters when a project gets complicated. I've had to balance user experience, sensitive data, uptime, budgets, and deadlines—and help other engineers do the same.
 
-</details>
+A few examples from my recent work:
 
-<details>
-<summary><strong>02 · Systems people depend on — healthcare, logistics, and defense</strong></summary>
+- **AI platform ownership:** Architecture and technical direction for a global agency, supporting 120 staff across the UK, US, and APJ, including 12+ production MCP integrations.
+- **Operating cost:** A Snowflake permissions and governance cleanup that reduced credit consumption by 35%, about £2,800 a month.
+- **Team development:** Led teams of 4–20 and coached five engineers into senior roles.
 
-**Teladoc** through its NYSE debut. Clinical systems and machine learning at **IntegraMed**. Through consulting engagements: **IBM enterprise search**, **Atlas Air flight scheduling**, **Dragos cybersecurity**, and **U.S. Air Force mission planning**.
-
-Different environments, familiar responsibilities: sensitive data, availability, performance, and changes that need a dependable path into production.
-
-</details>
-
-<details>
-<summary><strong>03 · The current chapter — enterprise AI and an open local stack</strong></summary>
-
-At **Basilecom / Transmission Agency**, I own AI platform architecture across the UK, US, and APJ: MCP integrations, private-data retrieval, evaluation, identity, and human approval. A recent Snowflake permissions and governance cleanup reduced credit consumption by **35%**, about **£2,800 a month**.
-
-Alongside that work, I train and publish models, contribute upstream runtime fixes, and develop local agent workflows. The current shared-browser direction is simple: **one visible workspace that a person and an agent can use together**. That work is still being built and qualified.
-
-I’ve led teams of **4–20**, coached **five engineers into senior roles**, and stayed involved in implementation. Architecture matters most when it helps a team ship.
-
-[Career background and case studies](https://philipjohnbasile.com) · [Enterprise AI case study](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md)
+[Career background and case studies](https://philipjohnbasile.com)
 
 </details>
-
-<details>
-<summary><strong>04 · Beyond the editor — community, a camera, and the rink</strong></summary>
-
-I’m based in **New Rochelle**. Outside software, I’ve volunteered with the **Civil Air Patrol**, photographed staff portraits pro bono for **Pelham Children’s Center**, and spent years involved in **youth hockey**.
-
-There are plenty of worthwhile things to make that never become a repository.
-
-</details>
-
-[The full career ↗](https://philipjohnbasile.com/career) · [More about me ↗](https://philipjohnbasile.com/about)
 
 <a name="field-notes"></a>
 
-<h3><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-writing-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-writing-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-writing-mobile-light.svg" />
-  <img src="assets/field-writing-light.svg" width="100%" alt="05 / Field notes — Leave a paper trail." />
-</picture></h3>
+## <img src="assets/studio-writing.svg" width="100%" alt="05 / Field notes — Leave a paper trail." />
 
 - **[MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)**<br />What changes when a model can act on a company’s tools and data.
 - **[Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive)**<br />Eight practical missions covering agents, prompting, retrieval, evaluation, and tool use.
@@ -348,16 +248,11 @@ That’s part of leaving a trail someone else can actually use.
 
 </details>
 
-[More writing ↗](https://philipjohnbasile.com/writing) · [Medium ↗](https://philipjohnbasile.medium.com/) · [↑ Back to the beginning](#top)
+[More writing ↗](https://philipjohnbasile.com/writing) · [Medium ↗](https://philipjohnbasile.medium.com/) · [↑ Back to the doors](#top)
 
 <a name="say-hello"></a>
 
-<p><a href="https://philipjohnbasile.com/contact"><picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/field-contact-mobile-dark.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/field-contact-dark.svg" />
-  <source media="(max-width: 600px)" srcset="assets/field-contact-mobile-light.svg" />
-  <img src="assets/field-contact-light.svg" width="100%" alt="Let’s make a useful dent. Start a conversation." />
-</picture></a></p>
+<a href="https://philipjohnbasile.com/contact"><img src="assets/studio-contact.svg" width="100%" alt="Let’s make a useful dent — start a conversation" /></a>
 
 I'm interested in principal and staff engineering roles where I can own the architecture, stay close to the code, and help a team ship useful AI systems. If that sounds like your team—or you've tried one of these projects—I'd like to hear from you.
 
