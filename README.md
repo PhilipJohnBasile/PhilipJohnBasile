@@ -52,7 +52,7 @@ I've also submitted PRs to MLX Serve, vLLM Metal, dflash, Google Ads MCP, Nixpkg
 The patches lead into the work itself: **training a model, making it run, and giving it useful tools**. Open a cover to explore the project, then launch the demo or follow the evidence. Keyboard: focus a cover and press <kbd>Enter</kbd>.
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="assets/case-wisp-mobile.svg" /><img src="assets/case-wisp.svg" width="93%" alt="Open or close case 01: Wisp Coder" /></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-wisp-mobile.svg" /><img src="assets/case-wisp.svg" width="93%" align="middle" alt="Open or close case 01: Wisp Coder" /></picture></summary>
 
 ### A small model. The whole training story.
 
@@ -69,7 +69,7 @@ I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 
 </details>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="assets/case-agents-mobile.svg" /><img src="assets/case-agents.svg" width="93%" alt="Open or close case 02: Agent Systems" /></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-agents-mobile.svg" /><img src="assets/case-agents.svg" width="93%" align="middle" alt="Open or close case 02: Agent Systems" /></picture></summary>
 
 ### Connect the tools. Keep the boundaries.
 
@@ -86,7 +86,7 @@ The current open-source direction brings that work onto the desktop: isolated co
 </details>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="assets/case-local-mobile.svg" /><img src="assets/case-local.svg" width="93%" alt="Open or close case 03: Local Inference" /></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-local-mobile.svg" /><img src="assets/case-local.svg" width="93%" align="middle" alt="Open or close case 03: Local Inference" /></picture></summary>
 
 ### Closer to the hardware.
 
@@ -101,7 +101,7 @@ MLX conversions, native multi-token prediction in **MTPLX**, and SSD-backed expe
 </details>
 
 <details>
-<summary><picture><source media="(max-width: 600px)" srcset="assets/case-rag-mobile.svg" /><img src="assets/case-rag.svg" width="93%" alt="Open or close case 04: RAG & Releases" /></picture></summary>
+<summary><picture><source media="(max-width: 600px)" srcset="assets/case-rag-mobile.svg" /><img src="assets/case-rag.svg" width="93%" align="middle" alt="Open or close case 04: RAG & Releases" /></picture></summary>
 
 ### Make retrieval earn its place in production.
 

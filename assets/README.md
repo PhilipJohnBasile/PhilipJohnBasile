@@ -8,6 +8,8 @@ The masthead uses adjacent links without intervening whitespace and top-aligned 
 
 The `picture` wrappers inside project summaries are intentional: they stop GitHub from automatically linking the cover image to its image viewer, which would intercept the click intended to expand the project.
 
+The summary images use `align="middle"` so GitHub's native disclosure triangle sits beside the center of each cover, rather than dangling at its bottom edge. The native triangle reflects the actual expanded state.
+
 The original street-art edition and its build script are retained below as source material.
 
 Adapted from the live street-art edition of [philipjohnbasile.com](https://philipjohnbasile.com/).
