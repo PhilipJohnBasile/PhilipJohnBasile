@@ -67,7 +67,7 @@ I trained **Wisp Coder** from tokenizer to released weights on Apple Silicon: a 
 
 **Try this:** open the demo, edit the code around the cursor, and ask Wisp to fill the gap. The free CPU demo uses the standard decoder.
 
-<a href="https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo"><img src="assets/launch-wisp.svg" width="75%" alt="Try Wisp in your browser — opens the live demo" /></a>
+<a href="https://huggingface.co/spaces/philipjohnbasile/wisp-coder-demo"><picture><source media="(max-width: 600px)" srcset="assets/launch-wisp-mobile.svg" /><img src="assets/launch-wisp.svg" width="100%" alt="Try Wisp in your browser — opens the live demo" /></picture></a>
 
 [Model card & weights ↗](https://huggingface.co/philipjohnbasile/wisp-coder-110m) · [Training case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/wisp-model-training.md) · [Portfolio story ↗](https://philipjohnbasile.com/work/wisp-coder)
 
@@ -84,7 +84,7 @@ MCP integrations, reusable skills, identity, and approval workflows for the syst
 
 **Explore this:** follow how access, tool contracts, operational controls, and adoption fit together in the case study.
 
-<a href="https://philipjohnbasile.com/mcp-agent-platform"><img src="assets/launch-agents.svg" width="75%" alt="Explore the agent platform — opens the portfolio case study" /></a>
+<a href="https://philipjohnbasile.com/mcp-agent-platform"><picture><source media="(max-width: 600px)" srcset="assets/launch-agents-mobile.svg" /><img src="assets/launch-agents.svg" width="100%" alt="Explore the agent platform — opens the portfolio case study" /></picture></a>
 
 [Engineering case study ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/enterprise-ai-platform.md) · [MCP is a governance problem ↗](https://philipjohnbasile.com/notes/mcp-is-a-governance-problem)
 
@@ -99,7 +99,7 @@ MLX conversions, native multi-token prediction in **MTPLX**, and SSD-backed expe
 
 **Explore this:** start with the architecture, then inspect source revisions, runtime recipes, and published measurement records before choosing a model.
 
-<a href="https://philipjohnbasile.com/work/local-inference"><img src="assets/launch-local.svg" width="75%" alt="Explore local inference — opens the portfolio case study" /></a>
+<a href="https://philipjohnbasile.com/work/local-inference"><picture><source media="(max-width: 600px)" srcset="assets/launch-local-mobile.svg" /><img src="assets/launch-local.svg" width="100%" alt="Explore local inference — opens the portfolio case study" /></picture></a>
 
 [iliria source ↗](https://github.com/PhilipJohnBasile/iliria) · [Measuring inference fairly ↗](https://github.com/PhilipJohnBasile/engineering-case-studies/blob/main/local-inference-measurement.md) · [Apple Silicon AI catalog ↗](https://huggingface.co/spaces/philipjohnbasile/local-ai-guide)
 
@@ -114,7 +114,7 @@ RAG systems with evaluation across **retrieval, answer grounding, latency, cost,
 
 **Explore this:** follow the retrieval and evaluation loop, including the checks used to catch regressions before release.
 
-<a href="https://philipjohnbasile.com/rag-eval-harness"><img src="assets/launch-rag.svg" width="75%" alt="Explore the RAG system — opens the portfolio case study" /></a>
+<a href="https://philipjohnbasile.com/rag-eval-harness"><picture><source media="(max-width: 600px)" srcset="assets/launch-rag-mobile.svg" /><img src="assets/launch-rag.svg" width="100%" alt="Explore the RAG system — opens the portfolio case study" /></picture></a>
 
 [Learn by building the loop ↗](https://philipjohnbasile.com/agent-engineering-beginner-deep-dive) · [More engineering case studies ↗](https://github.com/PhilipJohnBasile/engineering-case-studies)
 

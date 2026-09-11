@@ -126,4 +126,7 @@ for slug,label in [('wisp','TRY WISP IN YOUR BROWSER'),('agents','EXPLORE THE AG
     b=texture(720,88)+display(label,20,58,34)+arrow(665,27,24,RED)
     b+='<path d="M0 81H720V88H0z" fill="#d93b2c"/>'
     svg(f'launch-{slug}.svg',720,88,b,label.title()+'. Opens the live demo or portfolio case study.')
+    m=texture(600,116)+display(label,16,69,33)+arrow(548,40,22,RED)
+    m+='<path d="M0 108H600V116H0z" fill="#d93b2c"/>'
+    svg(f'launch-{slug}-mobile.svg',600,116,m,label.title()+'. Opens the live demo or portfolio case study.')
 print('Built the studio hero, navigation, headings, project covers, and launch panels.')
