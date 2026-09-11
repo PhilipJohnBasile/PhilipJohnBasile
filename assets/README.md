@@ -1,12 +1,14 @@
 # Profile artwork
 
-The current studio edition adds a short kinetic introduction, section navigation, and project covers that unfold with GitHub's native `details` / `summary` controls. Each open project has a real demo or case-study link. The mobile hero and project covers use `picture` sources.
+The current fieldbook edition uses transparent artwork and an open typographic layout. It takes its continuous reading flow from the [Wisp model card](https://huggingface.co/philipjohnbasile/wisp-coder-110m), with the personal site's Anton lettering and red accents. There are no background panels between sections.
 
-Rebuild the current edition with `python3 scripts/build-studio-art.py` (requires `fonttools`). Its SVGs contain no scripts or external resources. CSS motion stops within 4.5 seconds and is disabled by `prefers-reduced-motion`; the layout and every link remain usable without animation.
+Rebuild with `python3 scripts/build-fieldbook-art.py` (requires `fonttools`). Desktop/mobile and light/dark variants are self-contained SVGs. The `picture` sources follow GitHub's theme and viewport. Motion finishes within 3.8 seconds and respects `prefers-reduced-motion`.
+
+The hero itself is a native disclosure: clicking it or pressing Enter reveals the connections from data through models, runtimes, agents, and people, with links to real work. Project titles and career chapters also unfold. Animation provides the introduction; disclosure and navigation are the supported interaction. GitHub does not permit page scripts, custom page styles, or interactive SVG internals inside README image elements.
 
 The `picture` wrappers inside project summaries are intentional: they stop GitHub from automatically linking the cover image to its image viewer, which would intercept the click intended to expand the project.
 
-The original street-art edition and its build script are retained below as source material.
+Earlier studio and street-art assets and their build scripts are retained as source material; they are not loaded by the current README.
 
 Adapted from the live street-art edition of [philipjohnbasile.com](https://philipjohnbasile.com/).
 
